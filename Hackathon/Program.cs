@@ -50,12 +50,32 @@ namespace Hackathon
             List<int> steps = ChallengeA2.processChallenge(value.start, value.destination);
             await ChallengeA2.postAsync(client, sampleURL, steps);
             //Challenge puzzle
-            sampleURL = "/api/path/1/medium/Puzzle";
-            value = await ChallengeA2.getAsync(client, sampleURL);
+            puzzleURL = "/api/path/1/medium/Puzzle";
+            value = await ChallengeA2.getAsync(client, puzzleURL);
             if (value != null)
             {
                 steps = ChallengeA2.processChallenge(value.start, value.destination);
-                await ChallengeA2.postAsync(client, sampleURL, steps);
+                await ChallengeA2.postAsync(client, puzzleURL, steps);
+            }
+
+            //start challenge B1
+            await ChallengeB1.startChallengeAsync(client);
+            //challenge sample
+            sampleURL = "/api/path/2/easy/Sample";
+            Time valueTime = await ChallengeB1.getAsync(client, sampleURL);
+            Console.WriteLine(valueTime.date1);
+            Console.WriteLine(valueTime.date2);
+            double sec = ChallengeB1.processChallenge(valueTime);
+            await ChallengeB1.postAsync(client, sampleURL, sec);
+
+            puzzleURL = "/api/path/2/easy/Puzzle";
+            valueTime = await ChallengeB1.getAsync(client, puzzleURL);
+            if (valueTime != null)
+            {
+                Console.WriteLine(valueTime.date1);
+                Console.WriteLine(valueTime.date2);
+                sec = ChallengeB1.processChallenge(valueTime);
+                await ChallengeB1.postAsync(client, puzzleURL, sec);
             }
         }
     }

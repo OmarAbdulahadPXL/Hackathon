@@ -30,3 +30,5 @@ C:\Users\Omar-PC\Github\Hackathon\Hackathon\obj\Debug\net5.0\Hackathon.dll
 C:\Users\Omar-PC\Github\Hackathon\Hackathon\obj\Debug\net5.0\ref\Hackathon.dll
 C:\Users\Omar-PC\Github\Hackathon\Hackathon\obj\Debug\net5.0\Hackathon.pdb
 C:\Users\Omar-PC\Github\Hackathon\Hackathon\obj\Debug\net5.0\Hackathon.genruntimeconfig.cache
+C:\Users\Omar-PC\Github\Hackathon\Hackathon\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Omar-PC\Github\Hackathon\Hackathon\obj\Debug\net5.0\Hackathon.csproj.CopyComplete

@@ -42,7 +42,7 @@ namespace Hackathon
             return numbers;
         }
 
-        public static int processNumber(List<int> numbers)
+        public static int processChallenge(List<int> numbers)
         {
             int som = 0;
             foreach (int i in numbers)

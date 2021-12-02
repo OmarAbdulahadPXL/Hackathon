@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "zn2c/grDAlQFMwv/l87SEML+FFGuYnYp9uhyYQe2WxO8d2MRBfwLuw0hbADKtSYKk5xLg26XhIiBCw7pxrxVAA==",
+  "dgSpecHash": "lg1GOLXI4XLAYLYp4/QrbcDR3NXY5fM/dtESvggdc0EYD9vo0PN1CfENKyHA5X/qpAgwwArYa+yiDOeTsPPaGg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Omar-PC\\Github\\Hackathon\\Hackathon\\Hackathon.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Omar-PC\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Omar-PC\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\Omar-PC\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Omar-PC\\.nuget\\packages\\system.collections.nongeneric\\4.3.0\\system.collections.nongeneric.4.3.0.nupkg.sha512",
     "C:\\Users\\Omar-PC\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
     "C:\\Users\\Omar-PC\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",

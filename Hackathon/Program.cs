@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -29,7 +30,7 @@ namespace Hackathon
             string sampleURL = "/api/path/1/easy/Sample";
             Console.WriteLine("Solving sample of challeng A1");
             List<int> numbers = await ChallengeA1.getAsync(client, sampleURL);
-            int som = ChallengeA1.processNumber(numbers);
+            int som = ChallengeA1.processChallenge(numbers);
             await ChallengeA1.postAsync(client, sampleURL, som);
             //Solve the legit challenge
             Console.WriteLine("Solving puzzle of challenge A1");
@@ -37,11 +38,25 @@ namespace Hackathon
             numbers = await ChallengeA1.getAsync(client, puzzleURL);
             if (numbers != null)
             {
-                som = ChallengeA1.processNumber(numbers);
+                som = ChallengeA1.processChallenge(numbers);
                 await ChallengeA1.postAsync(client, puzzleURL, som);
             }
 
-
+            //start challenge A2
+            await ChallengeA2.startChallengeAsync(client);
+            //Challenge sample
+            sampleURL = "/api/path/1/medium/Sample";
+            Lift value = await ChallengeA2.getAsync(client, sampleURL);
+            List<int> steps = ChallengeA2.processChallenge(value.start, value.destination);
+            await ChallengeA2.postAsync(client, sampleURL, steps);
+            //Challenge puzzle
+            sampleURL = "/api/path/1/medium/Puzzle";
+            value = await ChallengeA2.getAsync(client, sampleURL);
+            if (value != null)
+            {
+                steps = ChallengeA2.processChallenge(value.start, value.destination);
+                await ChallengeA2.postAsync(client, sampleURL, steps);
+            }
         }
     }
 }
